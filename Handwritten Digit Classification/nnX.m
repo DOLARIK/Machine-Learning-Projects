@@ -1,4 +1,4 @@
-function [pred,t,Jnn_o] = grDnnX(X,y,H,s,alpha,lambda,iter,target_dev,target_loss)
+function [pred,t,Jnn_o] = nnX(X,y,H,s,alpha,lambda,iter,target_dev,target_loss)
 
 n = size(X,1);                                      % No. of Instances in training X
 
@@ -28,17 +28,17 @@ end
 
 for h = 1:H+1
     if h == 1
-        t{h} = rand(fX,f{h})*(2*.1) - .1;                       
+        t{h} = rand(fX,f{h})*(2*.001) - .001;                       
         Delta{h} = zeros(fX,f{h});
     end
     
     if h > 1 && h < H+1
-        t{h} = rand(f{h-1},f{h})*(2*.1) - .1;
+        t{h} = rand(f{h-1},f{h})*(2*.001) - .001;
         Delta{h} = zeros(f{h-1},f{h});
     end
     
     if h == H+1
-        t{h} = rand(f{h-1},K)*(2*.1) - .1;
+        t{h} = rand(f{h-1},K)*(2*.001) - .001;
         Delta{h} = zeros(f{h-1},K);
     end
         
@@ -82,7 +82,7 @@ while 1
         for l = 1:H+2
             
             if l == 1
-                d{H+3-l} = (-1*((y(i,:)./pred(i,:))-((1-y(i,:))./(1-pred(i,:))))).*da{H+3-l};
+                d{H+3-l} = (pred(i,:) - y(i,:)).*da{H+3-l};    %-1*((y(i,:)./pred(i,:))-((1-y(i,:))./(1-pred(i,:))))
             end
             
             if l > 1 && l <H+2
@@ -100,10 +100,8 @@ while 1
         end
         
     % Gradient Descent
-
-        for l = 1:H+1
-            t{l} = t{l}*(lambda) - alpha*(Delta{l});
-        end
+        
+        t = grD(t,Delta,lambda,H,alpha);
     
     end
     

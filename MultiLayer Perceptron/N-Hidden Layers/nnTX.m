@@ -1,4 +1,4 @@
-function [pred,pred1,pred2,A] = grDnnTX(X,y,t,s)
+function [pred,pred1,pred2,A] = nnTX(X,y,t,s)
 
     g = size(t,2);
        

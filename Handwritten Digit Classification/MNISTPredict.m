@@ -2,15 +2,15 @@ function MNISTPredict()
 
 while 1
     
-    fprintf('We will work with a Vanilla Neural Network with 1 Hidden Layer \n\n');
+    fprintf('We will work with a Vanilla Neural Network with N Hidden Layers \n\n');
     
-    f1 = input('How many Hidden Neurons should be there in the Hidden Layer? \n');
+    H = input('How many Hidden Layers should be there? \n');
     s = input('ReLU Slope = ');
     alpha = input('Learning Rate (usualy start with .001) = ');
     lambda = input('Regularization Parameter (b/w 0 and 1) = ');
     iter = input('How many Minimum No. of iterations would you like to have? \n');
-    target = input('When would you like to stop the Training? When the Development becomes < ');
-    
+    target_dev = input('When would you like to stop the Training? When the Development becomes < ');
+    target_loss = input(' and Loss becomes < ');
     fprintf('\n');
     
     fprintf('Reading Training Data..... \n\n');
@@ -25,12 +25,14 @@ while 1
         ytrain = yGen(y+1,10);
 
     fprintf('Training.....\n\n');
-        [pred,t1,t2,loss] = grDnnF(Xtrain,ytrain,f1,s,alpha,lambda,iter,target);
+        [pred,t,loss] = nnX(Xtrain,ytrain,H,s,alpha,lambda,iter,target_dev,target_loss);
 
     fprintf('Writing Training Data.....\n\n');
         dlmwrite('C:\Users\npl\Desktop\Divyanshu\Machine Learning\Machine-Learning\Progress\Models\Neural Networks\MNIST\One Hidden Layer\train\pred.csv',pred);
-        dlmwrite('C:\Users\npl\Desktop\Divyanshu\Machine Learning\Machine-Learning\Progress\Models\Neural Networks\MNIST\One Hidden Layer\train\theta1.csv',t1);
-        dlmwrite('C:\Users\npl\Desktop\Divyanshu\Machine Learning\Machine-Learning\Progress\Models\Neural Networks\MNIST\One Hidden Layer\train\theta2.csv',t2);
+        for k = 1:size(t,2)
+            theta_loc = ['C:\Users\npl\Desktop\Divyanshu\Machine Learning\Machine-Learning\Progress\Models\Neural Networks\MNIST\One Hidden Layer\train\theta' num2str(k) '.csv'];
+            dlmwrite(theta_loc,t{k});
+        end
         dlmwrite('C:\Users\npl\Desktop\Divyanshu\Machine Learning\Machine-Learning\Progress\Models\Neural Networks\MNIST\One Hidden Layer\train\loss.csv',loss);
     fprintf('Kindly check your Training Data files, the data has been written onto those files.\n\n');
 
@@ -48,7 +50,7 @@ while 1
 
     fprintf('Predicting Test Values..... \n\n');
 
-        [pred1,pred2,pred3,A] = grDnnT1(Xtest,ytest,t1,t2,s);
+        [pred1,pred2,pred3,A] = nnTX(Xtest,y,t,s);
 
     fprintf('ACCURACY = %g \n\n', A);
     
@@ -66,19 +68,21 @@ while 1
         break
     else fprintf('Try Retraining the Model with a different Architecture\n');
     end
+    
+end
 
     for i = 1:100 
        M(i) = randi([100*(i-1),i*100],1,1);
     end
+
+    figure();
     
     for m = 1:100
         
         imshow(a(:,:,M(m))');
         xlabel(pred3(M(m)));
         
-        pause(1.2)
+        pause(.8)
         
     end
     
-end
-
