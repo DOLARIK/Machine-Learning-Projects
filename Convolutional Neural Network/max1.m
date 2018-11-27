@@ -9,7 +9,7 @@ Bd = size(B,3);
 for k = 1:Bd
     for i = 1:Bh
         for j = 1:Bw
-            if B(i,j,k) == max(max(max(B)))
+            if B(i,j,k) == max(max(B(:,:,k)))
                 A(i,j,k) = 1;
             end
         end

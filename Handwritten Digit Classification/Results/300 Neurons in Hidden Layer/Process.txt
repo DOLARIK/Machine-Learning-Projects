@@ -1,0 +1,86 @@
+We will work with a Vanilla Neural Network with N Hidden Layers 
+
+How many Hidden Layers should be there? 
+1
+ReLU Slope = .1
+Learning Rate (usualy start with .001) = .001
+Regularization Parameter (b/w 0 and 1) = .9
+How many Minimum No. of iterations would you like to have? 
+10
+When would you like to stop the Training? When the Development becomes < .01
+ and Loss becomes < .1
+
+Reading Training Data..... 
+
+Loading Training Data.....
+
+Training.....
+
+How many neurons do you want in 1st Hidden Layer? -> 
+300
+
+Iteration No. 1 || Loss = 2.01147 
+Iteration No. 2 || Loss = 0.583974 
+Iteration No. 3 || Loss = 0.453826 
+Iteration No. 4 || Loss = 0.38161 
+Iteration No. 5 || Loss = 0.33311 
+Iteration No. 6 || Loss = 0.297333 
+Iteration No. 7 || Loss = 0.269427 
+Iteration No. 8 || Loss = 0.246675 
+Iteration No. 9 || Loss = 0.227657 
+Iteration No. 10 || Loss = 0.211785 
+Iteration No. 11 || Loss = 0.198199 || Development = 1.79968 
+Iteration No. 12 || Loss = 0.186537 || Development = 0.385776 
+Iteration No. 13 || Loss = 0.176348 || Development = 0.267289 
+Iteration No. 14 || Loss = 0.167286 || Development = 0.205262 
+Iteration No. 15 || Loss = 0.159315 || Development = 0.165824 
+Iteration No. 16 || Loss = 0.152105 || Development = 0.138018 
+Iteration No. 17 || Loss = 0.145782 || Development = 0.117322 
+Iteration No. 18 || Loss = 0.139952 || Development = 0.100893 
+Iteration No. 19 || Loss = 0.134713 || Development = 0.0877052 
+Iteration No. 20 || Loss = 0.130007 || Development = 0.0770719 
+Iteration No. 21 || Loss = 0.125662 || Development = 0.068192 
+Iteration No. 22 || Loss = 0.121718 || Development = 0.0608746 
+Iteration No. 23 || Loss = 0.118023 || Development = 0.0546295 
+Iteration No. 24 || Loss = 0.114634 || Development = 0.0492631 
+Iteration No. 25 || Loss = 0.111544 || Development = 0.0446812 
+Iteration No. 26 || Loss = 0.108625 || Development = 0.0405608 
+Iteration No. 27 || Loss = 0.10588 || Development = 0.0371575 
+Iteration No. 28 || Loss = 0.103323 || Development = 0.0340711 
+Iteration No. 29 || Loss = 0.100963 || Development = 0.0313903 
+Iteration No. 30 || Loss = 0.098703 || Development = 0.0290432 
+Iteration No. 31 || Loss = 0.0966293 || Development = 0.0269594 
+Iteration No. 32 || Loss = 0.0946448 || Development = 0.0250889 
+Iteration No. 33 || Loss = 0.0927668 || Development = 0.0233783 
+Iteration No. 34 || Loss = 0.0909763 || Development = 0.0218672 
+Iteration No. 35 || Loss = 0.0893457 || Development = 0.020568 
+Iteration No. 36 || Loss = 0.0877507 || Development = 0.0192788 
+Iteration No. 37 || Loss = 0.0862552 || Development = 0.0181297 
+Iteration No. 38 || Loss = 0.0848304 || Development = 0.017068 
+Iteration No. 39 || Loss = 0.0834302 || Development = 0.016133 
+Iteration No. 40 || Loss = 0.0820864 || Development = 0.0152728 
+Iteration No. 41 || Loss = 0.0808237 || Development = 0.0145429 
+Iteration No. 42 || Loss = 0.0796308 || Development = 0.0138211 
+Iteration No. 43 || Loss = 0.0785066 || Development = 0.013136 
+Iteration No. 44 || Loss = 0.0774269 || Development = 0.0124697 
+Iteration No. 45 || Loss = 0.0764383 || Development = 0.0119188 
+Iteration No. 46 || Loss = 0.0754907 || Development = 0.0113124 
+Iteration No. 47 || Loss = 0.0745546 || Development = 0.0107645 
+Iteration No. 48 || Loss = 0.0737181 || Development = 0.0102758 
+Iteration No. 49 || Loss = 0.0729069 || Development = 0.00971207 
+
+Writing Training Data.....
+
+Kindly check your Training Data files, the data has been written onto those files.
+
+Reading Test Data.....Loading Test Data.....
+
+Predicting Test Values..... 
+
+ACCURACY = 98.09 
+
+Writing Test Data..... 
+
+Kindly check your Test Data files, the data has been written onto those files.
+
+Pretty Good Model. Good Job :) 
