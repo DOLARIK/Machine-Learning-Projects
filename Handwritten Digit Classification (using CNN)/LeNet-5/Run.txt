@@ -1,0 +1,1 @@
+Just put all these files and the Data files in the same folder and run 'MNIST_CNN'.
