@@ -1,0 +1,16 @@
+https://susanqq.github.io/UTKFace/
+------------------------------------
+Dataset that I used - 
+
+1) Downloaded the Aligned&Cropped Dataset
+2) You'll be redirected to A Google Drive link and you will be asked to download the folder.
+3) You'll have to download the file named 'UTKFace.tar.gz'
+------------------------------------
+My code will do the rest of the extraction and importing and training work.
+
+4) Run 'Race_from_Face.m'.
+
+# I have made a Dynamic Convolutional Neural Network.
+# You can make your own model and train on the network by answering a few questions asked by the code.
+
+## For more Information See the Folder named 'Convolutional Neural Network' in the same Repository.
