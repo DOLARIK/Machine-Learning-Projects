@@ -6,7 +6,7 @@ fprintf('Select the Folder where you want to Extract the Data. \n');
 extract_folder_loc = uigetdir;
 
 file_loc = [folder_loc,'\cifar-10-matlab.tar.gz'];
-%untar(file_loc,extract_folder_loc);
+untar(file_loc,extract_folder_loc);
 
 %% Loading
 fprintf('Loading Train Data. \n');
