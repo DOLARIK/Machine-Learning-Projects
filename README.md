@@ -1,7 +1,7 @@
 # Machine-Learning-Projects
 All the Projects related to Machine Learning
 
-Here I upload all the unfinished projects in their respective folders. Once the project touches the finish line I create a separate directory for the respective project.
+Here I upload all the unfinished projects in their respective folders. Once the project touches the finish line I create a separate repository for the respective project.
 
 ## News
 *31-12-2018*
